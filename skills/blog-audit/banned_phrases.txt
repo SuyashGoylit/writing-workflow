@@ -1,0 +1,134 @@
+# Banned and watched phrases for blog-audit.
+# Sections: [ban] = FAIL if present, [watch] = WARN (use sparingly), [ban-regex] / [watch-regex] = Python regex.
+# Matching is case-insensitive. Curly apostrophes are normalised to straight ones before matching.
+# Add new lines as the writer spots more giveaway phrases.
+
+[ban]
+dive into
+dive deeper
+deep dive
+delve
+delves
+delving
+unleash
+unleashing
+unlock the potential
+unlock the full potential
+unlocking the potential
+game-changer
+game changer
+game-changing
+revolutionize
+revolutionise
+revolutionizing
+revolutionary
+in today's fast-paced
+in today's digital age
+in today's digital landscape
+in today's world
+in the modern era
+ever-evolving
+ever-changing landscape
+rapidly evolving landscape
+harness the power
+harnessing the power
+navigate the complexities
+navigating the complexities
+tapestry
+a testament to
+stands as a testament
+in the realm of
+the realm of
+embark on
+embarking on
+look no further
+buckle up
+without further ado
+in conclusion
+to sum up
+in summary
+at the end of the day
+the world of
+paradigm shift
+next-level
+supercharge
+skyrocket
+cutting-edge
+state-of-the-art
+best-in-class
+world-class
+seamless integration
+elevate your
+empower you
+it's important to note
+it is important to note
+it's worth noting
+it is worth noting
+needless to say
+the bottom line
+
+[ban-regex]
+\bit'?s no longer (just )?about\b
+\bno longer just\b
+\bnot just\b[^.!?\n]{1,80}\bbut( also)?\b
+\bnot only\b[^.!?\n]{1,80}\bbut( also)?\b
+\bisn'?t just\b
+\baren'?t just\b
+\bmore than just\b
+\bit'?s not\b[^.!?\n]{1,50}[,;]\s*it'?s\b
+\bwhether you'?re\b
+\bhere'?s the (thing|kicker|catch|twist)\b
+\bthe (truth|reality) is\b
+\blet's\b
+\bin (a|an|the) (world|era|age) where\b
+\bthe result\?
+\bthe answer\?
+\bthink about it\b
+\bplot twist\b
+
+[watch]
+seamless
+seamlessly
+robust
+leverage
+leveraging
+landscape
+crucial
+pivotal
+paramount
+holistic
+empower
+empowers
+elevate
+streamline
+streamlines
+synergy
+foster
+fosters
+bolster
+myriad
+plethora
+moreover
+furthermore
+additionally
+notably
+ultimately
+essentially
+comprehensive
+transformative
+transform
+innovative
+dynamic
+vital
+key to success
+when it comes to
+in order to
+a wide range of
+a variety of
+plays a crucial role
+plays a key role
+significantly
+effortlessly
+unparalleled
+meticulous
+intricate

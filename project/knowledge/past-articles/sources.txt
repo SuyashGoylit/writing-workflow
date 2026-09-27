@@ -1,0 +1,7 @@
+# Her published articles (one URL per line). Run: python3 scripts/fetch_articles.py
+https://www.cloud4c.com/blogs/sap-on-sovereign-cloud-in-europe-for-energy-industry
+https://www.cloud4c.com/blogs/top-trends-in-energy-and-utility-cloud-offerings
+https://www.cloud4c.com/blogs/10-questions-to-ask-an-mssp-in-2026
+https://www.cloud4c.com/blogs/ai-msp-in-the-middle-east-an-overview
+https://www.cloud4c.com/blogs/12-questions-to-ask-before-choosing-an-msp-in-2026
+https://www.cloud4c.com/blogs/traditional-managed-ops-versus-aiops-which-one-to-choose

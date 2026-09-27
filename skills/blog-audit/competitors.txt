@@ -1,0 +1,43 @@
+# Competitor names for blog-audit. One name per line.
+# Matching is CASE-SENSITIVE with word boundaries (brand names are capitalised),
+# so "orange" (colour) won't match but "Orange" will be flagged for review.
+# Keep in sync with project/knowledge/competitors.md.
+Rackspace
+Wipro
+HCLTech
+HCL
+IBM
+watsonx
+UST Global
+UST
+Mindtree
+LTIMindtree
+TCS
+Tata Consultancy
+Infosys
+Cognizant
+Capgemini
+BT Group
+BT Business
+BT
+DXC
+Lumen
+Orange Business
+Orange
+Telefonica
+Telefónica
+T-Systems
+rackspace.com
+wipro.com
+hcltech.com
+ibm.com
+ust.com
+tcs.com
+infosys.com
+cognizant.com
+capgemini.com
+dxc.com
+lumen.com
+orange-business.com
+telefonica.com
+t-systems.com
