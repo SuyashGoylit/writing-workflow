@@ -1,0 +1,5 @@
+# Real client names that must never appear in an anonymised case study LP.
+# One per line. Both scripts flag these in the sources (sourcetext.py) and fail the LP (verify_lp.py).
+# Found in the PDF of european-aviation-services (Oct 2026):
+Lufthansa Technik
+Lufthansa

@@ -1,0 +1,90 @@
+{
+  "title": "Cloud4C Accelerates Fool-proof Data-driven Operations for European Aviation Services Company",
+  "breadcrumb": [
+    "Aviation",
+    "Europe"
+  ],
+  "figures": {
+    "pdf": [
+      {
+        "value": "30",
+        "unit": "",
+        "cur": "",
+        "qual": "plus",
+        "raw": "Over 30",
+        "key": "30",
+        "origin": "pdf",
+        "context": "g flow. Consolidating and reconciling production pipelines Over 30 production pipelines were consolidated and stabilized. Clou"
+      },
+      {
+        "value": "40",
+        "unit": "%",
+        "cur": "",
+        "qual": "approx",
+        "raw": "Approximately 40%",
+        "key": "40 %",
+        "origin": "pdf",
+        "context": "ation Data integrity restored across MM-critical datasets Approximately 40% reduction in pipeline execution time Approximately 40% red"
+      },
+      {
+        "value": "40",
+        "unit": "%",
+        "cur": "",
+        "qual": "approx",
+        "raw": "Approximately 40%",
+        "key": "40 %",
+        "origin": "pdf",
+        "context": "ts Approximately 40% reduction in pipeline execution time Approximately 40% reduction in Synapse SQL Pool costs Improved Power BI refr"
+      }
+    ],
+    "lp": [
+      {
+        "value": "30",
+        "unit": "",
+        "cur": "",
+        "qual": "plus",
+        "raw": "over 30",
+        "key": "30",
+        "origin": "lp",
+        "context": "ty handling for Oracle anomalies. Cloud4C also consolidated over 30 production pipelines, executed large-scale historical reloa"
+      },
+      {
+        "value": "40",
+        "unit": "%",
+        "cur": "",
+        "qual": "approx",
+        "raw": "~40%",
+        "key": "40 %",
+        "origin": "lp",
+        "context": "n - Restored data integrity across MM-critical datasets - ~40% reduction in pipeline execution time - ~40% reduction in S"
+      },
+      {
+        "value": "40",
+        "unit": "%",
+        "cur": "",
+        "qual": "approx",
+        "raw": "~40%",
+        "key": "40 %",
+        "origin": "lp",
+        "context": "al datasets - ~40% reduction in pipeline execution time - ~40% reduction in Synapse SQL Pool costs - Improved Power BI re"
+      }
+    ]
+  },
+  "headline_figures": [
+    "40 %"
+  ],
+  "conflicts": [],
+  "lp_only_figures": [],
+  "unmapped_glyphs": [],
+  "client_names_found": [
+    {
+      "name": "Lufthansa Technik",
+      "context": "Synapse SQL Pool cost concerns created additional pressure. Lufthansa Technik needed the environment to be stabilized not only for reliab"
+    },
+    {
+      "name": "Lufthansa",
+      "context": "Synapse SQL Pool cost concerns created additional pressure. Lufthansa Technik needed the environment to be stabilized not only fo"
+    }
+  ],
+  "engine": "pdftotext"
+}

@@ -86,3 +86,64 @@ Needs a **Pro or Max** plan.
   - The "if we're clear…" handshake became the outline-approval step.
   - The contradictory "write as you speak" and "no you/I" rules were reconciled into third-person conversational writing.
   - The missing "Structure of blog" section was written out in `style-rules.md` §4.
+
+---
+
+# Case Study LP Revamp (second Project)
+
+Two more skills rewrite Cloud4C's ~50 case study landing pages into the new interactive template (`Case Study 2_ Revamp_ Middle East Petrochemical Data Centre.docx`) and check the result against the sources. The LP links and PDF links are listed in `CLOUD4C PAGE REVAMP.xlsx`.
+
+```
+LP link + PDF ──► case-study-lp ──► lp.md + .docx (template styles) ──► case-study-verify ──► fix ──► deliver
+                  (extract sources,                                     (script: structure, figures, names,
+                   claim ledger, write)                                  meaning watch, coverage, copying, style
+                                                                         + sentence-by-sentence meaning audit)
+```
+
+| Path | What it's for |
+|---|---|
+| `project-case-studies/instructions.md` | Paste into the new Project's **custom instructions** |
+| `skills/case-study-lp/` | Writes the LP: `template.md` (skeleton with fixed copy and slot rules), `example.md` (a worked example that passes verification), `scripts/build_docx.py`, `assets/lp-template.docx` |
+| `skills/case-study-verify/` | `scripts/verify_lp.py` and the claim-audit procedure |
+| `skills/_shared/` | `sourcetext.py` (PDF/LP extraction), `lpformat.py` (lp.md and .docx reader), `client_names.txt`. `package.sh` copies these into both zips. |
+| `tests/case-studies/` | Fixtures and `test_case_studies.py` |
+
+## Setup (about 5 minutes)
+1. Run `./scripts/package.sh` and upload `dist/case-study-lp.zip` and `dist/case-study-verify.zip` (Settings → Capabilities → Skills). Code execution and web search/fetch must be on.
+2. Create a Project called **Cloud4C Case Study LPs** and paste `project-case-studies/instructions.md` into its custom instructions. No knowledge files are needed.
+
+## Daily use
+Start a new chat in the Project, upload the PDF (preferred over a link: the sandbox may not reach cloud4c.com), and paste the row from the tracker:
+```
+Case Study Name: middle-east-petroleum-company
+Existing LP Link: https://www.cloud4c.com/wb/case-study/middle-east-petroleum-company/
+Existing Case Study PDF Link: https://www.cloud4c.com/wb/case-study/middle-east-petroleum-company/middle-east-petroleum-company.pdf
+```
+You get the LP in Markdown, a .docx download (with the original LP and PDF links at the top), and notes on LP/PDF conflicts, flags and verification. To check an LP after editing it by hand, upload the .docx and say **"verify"**.
+
+## What the sources taught the setup
+- **The PDFs hide symbols.** They store `+ / < > ( ) : -` as private-use glyphs, so a plain text extraction turns "24/7" into "247", "60+ TB" into "60 TB" and ">99%" into "99%". `sourcetext.py` maps them back. Some LP pages contain the same glyphs. All 50 PDFs extract with zero unmapped glyphs.
+- **Two-column layouts interleave** in normal extraction. `sourcetext.py` rebuilds the reading order from line positions (XY-cut), so each column reads as a paragraph.
+- **The LP and PDF disagree in places**: the LP has figures the PDF lacks (indian-home-appliances-giant, middle-east-industry-conglomerate), or a different qualifier ("2,500+" vs "approximately 2,500"). Both sources are usable, the PDF wins on conflicts, and every conflict is listed.
+- **A real client name leaks**: the european-aviation-services PDF names the client. It is in `client_names.txt`, so it's flagged in the sources and fails in the LP.
+- **The client's template example is not a clean model.** Its About section copies a 15-word run from the PDF, it uses British "Centre", and it writes "3 TB" where both sources say "3 TB+". `example.md` is the corrected version, and `tests/case-studies/template_as_is.md` keeps the original for the tests.
+
+## Client feedback built in (Oct 2026)
+- **"Some sentences change the meaning of the original."** The rewrite pressure (no 8-word runs) pushed the model to loosen claims: "specifically" became "starting with", "the rest of the environment" became "every other system", "3 TB+" became "3 TB". `example.md` itself had several of these, so the skill was learning them. Fixes:
+  - case-study-lp writes a **claim ledger** (`ledger.md`) with the **locked words** of every claim, follows a "change the wording, never the claim" rule that outranks the anti-copy rule, and self-checks each sentence against the ledger.
+  - verify_lp.py adds **Meaning watch**: it pairs each LP sentence with its closest source sentence and flags added or dropped scope, hedge, modality, negation, time and cause words. It fails any qualifier change on a figure, dropped ones included. `--align align.md` writes the pairing for the audit.
+  - case-study-verify's audit goes **sentence by sentence** with seven drift questions and new verdicts (Meaning changed, Understated), and saves the full table to `audit.md`.
+- **"Attach the original LP link and the PDF at the beginning."** The first two lines of the LP are `**Original LP:**` and `**Original PDF:**`. The .docx shows them as a shaded box with clickable links. The verifier checks them against `--lp-url` and `--pdf-url`.
+- **"Combine info from both the LP and the PDF."** The ledger takes rows from both sources, and the **Source coverage** check lists LP and PDF points the new LP doesn't use.
+- **"Add a one-liner under each compare question."** Each question gets an italic 8-20 word help line, then the toggle.
+
+## Tracker sheet issues found
+- Row 8 (`indian-insurance-leader`): the PDF link is truncated (`…/indian-insurance-lea`, returns 404). The working link is `…/indian-insurance-leader/indian-insurance-leader.pdf`.
+- Row 49's slug has a typo (`malaysian-energy-ad-utility-behemoth`), but that is the live URL, so leave it.
+- Rows 29–51 use `/wb/case-study/lp/<slug>/`, and the rest use `/wb/case-study/<slug>/`. Both work.
+
+## Maintaining it
+- **Template changes**: edit `skills/case-study-lp/template.md`. Fixed copy is checked against it, so update `example.md` to match, run the tests, then re-package and re-upload both case study zips.
+- **New real client name found**: add it to `skills/_shared/client_names.txt`, then re-package and re-upload both zips.
+- **New Word template**: `python3 skills/case-study-lp/scripts/build_docx.py --strip-template new.docx` refreshes `assets/lp-template.docx`. Its paragraph formatting is hard-coded in `build_docx.py` (`PPR`), so check those values against the new file.
+- **Tests**: `python3 -m unittest discover -s tests/case-studies -v`. To also test against the real PDFs, download `<slug>.pdf`/`<slug>.html` into a folder and set `CASE_STUDY_PDF_DIR` to it.

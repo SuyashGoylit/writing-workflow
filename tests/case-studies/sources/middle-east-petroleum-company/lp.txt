@@ -1,0 +1,25 @@
+# Near Zero Downtime, Zero Data Loss: Middle East Petrochemical Major's Data Center Exit to Azure
+
+Breadcrumb: Oil & Gas | Middle East and Africa
+
+## About the Client
+
+A major petrochemical manufacturer in the Middle East, found itself at a crossroads familiar to many large industrial enterprises. Years earlier, the company had embraced SAP to digitize its core operations, running an ERP landscape that touched everything from production planning to service delivery. But digitization brought its own weight. As the business scaled, so did the burden of keeping two parallel environments alive on-premises, production and disaster recovery, each demanding its own infrastructure, its own upkeep, its own risk.
+
+## The Challenge
+
+Running a mission critical SAP landscape on-premises is one thing. Keeping a fully functional disaster recovery environment mirrored alongside it, without fail, is another challenge altogether. For this petrochemical major, maintaining both had become an operational hassle, tying up resources, adding cost, and leaving little room to scale as the business grew. Leadership knew the fix wasn't a patch job. They needed a genuine data center exit strategy for their DR workloads, one that could match the scale of over 80 business critical applications and a HANA database running into terabytes, without a single misstep along the way.
+
+## The Solution
+
+Cloud4C stepped in with a Factory-led approach. The entire DR landscape, SAP, HANA, and beyond, was migrated to a locally hosted, fully compliant Azure cloud environment, engineered for zero disruption and zero data loss throughout the transition. But the migration was only the starting point. Cloud4C layered in automated backups, advanced native security, and extended protection to critical systems like Microsoft Exchange, before validating the entire setup through periodic disaster recovery drills. The result was a DR ecosystem now running on Azure under a scalable, OpEx-driven model.
+
+## THE RESULT
+
+- Seamless continuity secured for 80+ business critical applications
+
+- Frictionless data operations achieved across a 3 TB+ HANA database
+
+- Non-SAP assets integrated onto cloud for consolidated operations and continuity
+
+- Risk-proof foundations established to support the company's next gen initiatives

@@ -1,0 +1,72 @@
+{
+  "title": "Near Zero Downtime, Zero Data Loss: Middle East Petrochemical Major's Data Center Exit to Azure",
+  "breadcrumb": [
+    "Oil & Gas",
+    "Middle East and Africa"
+  ],
+  "figures": {
+    "pdf": [
+      {
+        "value": "80",
+        "unit": "",
+        "cur": "",
+        "qual": "plus",
+        "raw": "80+",
+        "key": "80",
+        "origin": "pdf",
+        "context": "and a Risk-Proof Foundation Seamless continuity secured for 80+ business critical applications Frictionless data operation"
+      },
+      {
+        "value": "3",
+        "unit": "TB",
+        "cur": "",
+        "qual": "plus",
+        "raw": "3 TB+",
+        "key": "3 TB",
+        "origin": "pdf",
+        "context": "applications Frictionless data operations achieved across a 3 TB+ HANA database Non-SAP assets integrated onto cloud for con"
+      }
+    ],
+    "lp": [
+      {
+        "value": "80",
+        "unit": "",
+        "cur": "",
+        "qual": "plus",
+        "raw": "over 80",
+        "key": "80",
+        "origin": "lp",
+        "context": "y for their DR workloads, one that could match the scale of over 80 business critical applications and a HANA database running"
+      },
+      {
+        "value": "80",
+        "unit": "",
+        "cur": "",
+        "qual": "plus",
+        "raw": "80+",
+        "key": "80",
+        "origin": "lp",
+        "context": "ven model. ## THE RESULT - Seamless continuity secured for 80+ business critical applications - Frictionless data operati"
+      },
+      {
+        "value": "3",
+        "unit": "TB",
+        "cur": "",
+        "qual": "plus",
+        "raw": "3 TB+",
+        "key": "3 TB",
+        "origin": "lp",
+        "context": "plications - Frictionless data operations achieved across a 3 TB+ HANA database - Non-SAP assets integrated onto cloud for c"
+      }
+    ]
+  },
+  "headline_figures": [
+    "3 TB",
+    "80"
+  ],
+  "conflicts": [],
+  "lp_only_figures": [],
+  "unmapped_glyphs": [],
+  "client_names_found": [],
+  "engine": "pdftotext"
+}
